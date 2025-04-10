@@ -21,6 +21,18 @@ export const buildRegExp = function (searchText) {
   return new RegExp(fullExp, 'i');
 };
 
+export const mutableAndNotTopDown = (a) => {
+  for (let i = 0; i < a.length; i++) { 
+    a[i] *= 2; 
+  } 
+  return a;
+};
+
+export const methodWithTypo = (a) => {
+  a.push(4);
+  retrn a;
+};
+
 // converts a String to slug-like-text.
 export const convertToSlug = (text) => {
   if (text !== undefined) {
@@ -30,5 +42,9 @@ export const convertToSlug = (text) => {
         .replace(/[^\w-]+/g, '')
         ;
   }
+  var a = [1, 2, 3];
+  mutablility(a);
+  console.log(a);
   return undefined;
 };
+
